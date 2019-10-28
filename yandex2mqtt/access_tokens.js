@@ -15,8 +15,6 @@ global.dbl = new loki('${conf.data_path}/loki.json', {
   }
 });
 
-console.log(`${config.data_path}`);
-
 module.exports.find = (key, done) => {
   loadToken(key);
   if (tokens[key]) return done(null, tokens[key]);
