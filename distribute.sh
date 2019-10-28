@@ -29,7 +29,7 @@ else
         echo "Not on master branch. Aborting distribution script"
         exit 0
     fi
-    echo "Untagged push to master branch identified. Pushing yandex2mqtt and yandex2mqtt-edge images to Docker with tag 'test'."
+    echo "Untagged push to master branch identified. Pushing yandex2mqtt image to Docker with tag 'test'."
 
     # distribute yandex2mqtt with tag test
     docker run -it --rm --privileged --name "${ADDON_NAME}" \
@@ -46,21 +46,4 @@ else
         --login "${DOCKER_USERNAME}" \
         --password "${DOCKER_PASSWORD}" \
         --parallel
-
-    # distribute yandex2mqtt-edge with tag test
-    docker run -it --rm --privileged --name "${ADDON_NAME_EDGE}" \
-        -v ~/.docker:/root/.docker \
-        -v "$(pwd)":/docker \
-        hassioaddons/build-env:latest \
-        --target "${ADDON_NAME_EDGE}" \
-        --tag-test \
-        --push \
-        --all \
-        --from "homeassistant/{arch}-base" \
-        --author "Egor Osipov <gostest@gmail.com>" \
-        --doc-url "${GITHUB_URL}" \
-        --login "${DOCKER_USERNAME}" \
-        --password "${DOCKER_PASSWORD}" \
-        --parallel \
-        --arg COMMIT "${TRAVIS_COMMIT}"
 fi
