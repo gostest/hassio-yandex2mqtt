@@ -3,7 +3,7 @@ set -ev
 
 if [ -z "${TRAVIS_TAG}" ]; then
     echo "Untagged build found. Testing building yandex2mqtt with tag 'test'."
-    # build zigbee2mqtt
+    # build yandex2mqtt
     docker run -it --rm --privileged --name "${ADDON_NAME}" \
         -v ~/.docker:/root/.docker \
         -v "$(pwd)":/docker \
