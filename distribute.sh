@@ -10,7 +10,6 @@ if [ ! -z "$TRAVIS_TAG" ]; then
     echo "Tagged build found. Pushing yandex2mqtt image to Docker with tag 'latest'."
 
     docker run -it --rm --privileged --name "${ADDON_NAME}" \
-        -v ~/.docker:/root/.docker \
         -v "$(pwd)":/docker \
         hassioaddons/build-env:latest \
         --target "${ADDON_NAME}" \
@@ -33,7 +32,6 @@ else
 
     # distribute yandex2mqtt with tag test
     docker run -it --rm --privileged --name "${ADDON_NAME}" \
-        -v ~/.docker:/root/.docker \
         -v "$(pwd)":/docker \
         hassioaddons/build-env:latest \
         --target "${ADDON_NAME}" \
