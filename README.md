@@ -3,10 +3,10 @@ Yandex2mqtt hassio addon
 
 ## О плагине
 Плагин позволяет установить и использовать мост из Яндекс УД в MQTT. Репозиторий самого моста:
-https://github.com/munrexio/yandex2mqtt
+https://github.com/munrexio/yandex2mqtt  
 Там же указаны ссылки на статьи автора на хабре как его настраивать и как с ним работать. 
 
-Сам плагин и скрипты сборки сделаны по мотивам:
+Сам плагин и скрипты сборки сделаны по мотивам:  
 https://github.com/danielwelch/hassio-zigbee2mqtt
 
 ## Установка
