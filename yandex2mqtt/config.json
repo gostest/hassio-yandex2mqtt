@@ -356,5 +356,5 @@
        ]
   },
   "schema": false,
-  "image": "gostestt/yandex2mqtt-{arch}"
+  "image": "deps/yandex2mqtt-{arch}"
 }
