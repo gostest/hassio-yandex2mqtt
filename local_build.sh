@@ -13,6 +13,6 @@ docker run -it --rm --privileged --name "yandex2mqtt" \
     --push \
     --all \
     --from "homeassistant/{arch}-base" \
-    --author "Egor Osipov <gostest@gmail.com>" \
-    --doc-url "https://github.com/gostest/hassio-yandex2mqtt" \
+    --author "Dmitry Parkhonin <deps@yandex.ru>" \
+    --doc-url "https://github.com/dparhonin/hassio-yandex2mqtt" \
     --parallel
