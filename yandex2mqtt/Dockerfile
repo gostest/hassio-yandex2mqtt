@@ -3,13 +3,13 @@ FROM $BUILD_FROM
 # Add env
 ENV LANG C.UTF-8
 
-ENV YANDEX2MQTT_VERSION=0.2.0
+ENV YANDEX2MQTT_VERSION=0.1.0
 ENV YDIR=yandex2mqtt
 
 RUN apk add --update --no-cache curl jq nodejs npm \
     python2 make gcc g++ linux-headers udev git python2 && \
   cd / && \
-  git clone https://github.com/munrexio/yandex2mqtt.git && \
+  git clone https://github.com/dparhonin/yandex2mqtt.git && \
   cd  $YDIR && \
   npm install --unsafe-perm -g pm2 && \
   npm install --unsafe-perm && \
