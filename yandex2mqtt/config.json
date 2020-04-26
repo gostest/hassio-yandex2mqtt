@@ -1,6 +1,6 @@
 {
   "name": "yandex2mqtt",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "slug": "yandex2mqtt",
   "description": "Yandex to MQTT Bridge",
   "auto_uart": true,
@@ -356,5 +356,5 @@
        ]
   },
   "schema": false,
-  "image": "deps/yandex2mqtt-{arch}"
+  "image": "dparhonin/yandex2mqtt-{arch}"
 }
