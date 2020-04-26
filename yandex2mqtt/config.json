@@ -1,10 +1,10 @@
 {
   "name": "yandex2mqtt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "slug": "yandex2mqtt",
   "description": "Yandex to MQTT Bridge",
   "auto_uart": true,
-  "url": "https://github.com/gostest/hassio-yandex2mqtt",
+  "url": "https://github.com/dparhonin/hassio-yandex2mqtt",
   "startup": "before",
   "arch": [
     "aarch64",
@@ -33,7 +33,7 @@
           "password":""
        },
        "https":{ 
-          "privateKey":"/ssl/privatekey.pem",
+          "privateKey":"/ssl/privkey.pem",
           "certificate":"/ssl/fullchain.pem",
           "port":443
        },
@@ -51,12 +51,6 @@
              "id":"1",
              "username":"admin",
              "password":"admin",
-             "name":"Administrator"
-          },
-          { 
-             "id":"2",
-             "username":"root",
-             "password":"root",
              "name":"Administrator"
           }
        ],
