@@ -355,6 +355,5 @@
           }
        ]
   },
-  "schema": false,
-  "image": "dparhonin/yandex2mqtt-{arch}"
+  "schema": false
 }
