@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 # Add env
 ENV LANG C.UTF-8
 
-ENV YANDEX2MQTT_VERSION=0.1.0
+ENV YANDEX2MQTT_VERSION=0.2.0
 ENV YDIR=yandex2mqtt
 
 RUN apk add --update --no-cache curl jq nodejs npm \
@@ -21,5 +21,6 @@ COPY access_tokens.js "/$YDIR/db/access_tokens.js"
 COPY run.sh "/$YDIR/run.sh"
 WORKDIR "/$YDIR"
 
+RUN ["ln", "-s", "/config/yandex2mqtt.json", "/data/options.json"]
 RUN ["chmod", "a+x", "./run.sh"]
 CMD [ "./run.sh" ]
