@@ -4,7 +4,7 @@ set -ev
 echo "Running local build test."
 
 # build yandex2mqtt
-docker run -it --rm --privileged --name "yandex2mqtt" \
+sudo docker run -it --rm --privileged --name "yandex2mqtt" \
     -v ~/.docker:/root/.docker \
     -v "$(pwd)":/docker \
     hassioaddons/build-env:latest \

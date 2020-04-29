@@ -21,6 +21,8 @@ COPY access_tokens.js "/$YDIR/db/access_tokens.js"
 COPY run.sh "/$YDIR/run.sh"
 WORKDIR "/$YDIR"
 
+RUN ["ls", "-al", "/"]
+RUN ["ls", "-al", "/config"]
 RUN ["ln", "-s", "/data/options.json", "/config/yandex2mqtt.json"]
 RUN ["chmod", "a+x", "./run.sh"]
 CMD [ "./run.sh" ]
