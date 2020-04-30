@@ -26,6 +26,7 @@
   },
   "options": {
     "data_path": "/share/yandex2mqtt",
+    "debug": "y2m.*",
     "mqtt": {
       "host": "localhost",
       "port": 1883,
