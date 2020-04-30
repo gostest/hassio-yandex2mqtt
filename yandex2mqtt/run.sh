@@ -9,5 +9,8 @@ mkdir -p $DATA_PATH
 # Parse config
 cp $CONFIG_PATH .
 
+# Link shared config
+ln -s $CONFIG_PATH /config/yandex2mqtt.json
+
 # RUN yandex2mqtt
 YANDEX2MQTT_DATA="$DATA_PATH" pm2-runtime start npm -- start

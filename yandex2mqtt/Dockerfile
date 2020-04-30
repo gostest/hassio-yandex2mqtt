@@ -21,11 +21,5 @@ COPY access_tokens.js "/$YDIR/db/access_tokens.js"
 COPY run.sh "/$YDIR/run.sh"
 WORKDIR "/$YDIR"
 
-#RUN ["ln", "-s", "/data/options.json", "/config/yandex2mqtt.json"]
-#RUN ["ls", "-al", "/"]
-#RUN ["ls", "-al", "/mnt"]
-#RUN ["ls", "-al", "/mnt/data"]
-#RUN ["ls", "-al", "/mnt/data/supervisor"]
-#RUN ["ls", "-al", "/mnt/data/supervisor/homeassistant"]
 RUN ["chmod", "a+x", "./run.sh"]
 CMD [ "./run.sh" ]
