@@ -17,7 +17,6 @@ RUN apk add --update --no-cache curl jq nodejs npm \
   rm -rf docs test images scripts data docker LICENSE README.md update.sh
 
 COPY config.js "/$YDIR/config.js"
-COPY access_tokens.js "/$YDIR/db/access_tokens.js"
 COPY run.sh "/$YDIR/run.sh"
 WORKDIR "/$YDIR"
 

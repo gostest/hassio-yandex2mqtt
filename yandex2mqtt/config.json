@@ -26,6 +26,7 @@
   },
   "options": {
     "data_path": "/share/yandex2mqtt",
+    "db_path": "/share/yandex2mqtt/tokenstorage.json",
     "debug": "y2m.*",
     "mqtt": {
       "host": "localhost",
