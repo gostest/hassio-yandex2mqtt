@@ -2,7 +2,6 @@
 
 CONFIG_PATH=/data/options.json
 DATA_PATH=$(jq --raw-output ".data_path" $CONFIG_PATH)
-#DEBUG=$(jq --raw-output ".debug" $CONFIG_PATH)
 
 # Check if config exists already
 mkdir -p $DATA_PATH
