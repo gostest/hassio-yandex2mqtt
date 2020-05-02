@@ -1,6 +1,6 @@
 {
   "name": "yandex2mqtt",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "slug": "yandex2mqtt",
   "description": "Yandex to MQTT Bridge",
   "auto_uart": true,

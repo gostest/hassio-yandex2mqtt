@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 # Add env
 ENV LANG C.UTF-8
 
-ENV YANDEX2MQTT_VERSION=0.2.0
+ENV YANDEX2MQTT_VERSION=0.2.1
 ENV YDIR=yandex2mqtt
 
 RUN apk add --update --no-cache curl jq nodejs npm \
