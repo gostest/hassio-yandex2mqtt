@@ -3,7 +3,6 @@
   "version": "0.3.0",
   "slug": "yandex2mqtt",
   "description": "Yandex to MQTT Bridge",
-  "uart": true,
   "url": "https://github.com/dparhonin/hassio-yandex2mqtt",
   "startup": "application",
   "arch": [
@@ -25,7 +24,6 @@
     "443/tcp": "Yandex2mqtt service tcp-listen ssl port"
   },
   "options": {
-    "data_path": "/share/y2m",
     "db_path": "/share/y2m/tokenstorage.json",
     "debug": "y2m.*",
     "mqtt": {
@@ -59,7 +57,6 @@
     "devices_path": "/share/y2m/devices.json"
   },
   "schema": {
-    "data_path": "str",
     "db_path": "str",
     "debug": "str?",
     "mqtt": {

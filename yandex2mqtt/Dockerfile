@@ -19,7 +19,7 @@ RUN apk add --update --no-cache curl jq nodejs npm git && \
 
 #Addon custom options
 COPY config.js /$YDIR/
-COPY devices.json /config/$YDIR/
+COPY devices.json /share/$YDIR/
 COPY run.sh /$YDIR/
 
 ENV DEBUG=y2m.*
