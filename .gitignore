@@ -1,3 +1,5 @@
 yandex2mqtt/options.json
 yandex2mqtt/app.js
 yandex2mqtt-private/
+y2m-private/
+backup/

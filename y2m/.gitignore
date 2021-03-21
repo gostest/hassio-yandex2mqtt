@@ -1,0 +1,13 @@
+.DS_Store
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+/config_private.js
+/config_public.js
+/config_local.js
+/devices_local.json
+/devices_private.json
+/devices_public.json
+private/
+backup/

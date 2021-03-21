@@ -1,0 +1,29 @@
+{
+    "default": {
+        "true": "ON",
+        "false": "OFF",
+        "ON": "true",
+        "OFF": "false"
+    },
+    "haierFanSpeed": {
+        "max": "high",
+        "high": "max",
+        "min": "low",
+        "low": "min",
+        "mid": "medium",
+        "medium": "mid"
+    },
+    "haierSwing": {
+        "ud": "vertical",
+        "vertical": "ud",
+        "lr": "horizontal",
+        "horizontal": "lr",
+        "all": "auto",
+        "auto": "all",
+        "off": "stationary",
+        "stationary": "off"
+      },
+      "haierThermostat": {
+        "off": "N/A"
+      }
+}

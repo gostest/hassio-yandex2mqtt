@@ -1,0 +1,171 @@
+[
+  {
+    "name": "Сервант",
+    "room": "Кухня",
+    "type": "devices.types.switch",
+    "mqtt": [
+      {
+        "type": "devices.capabilities.on_off",
+        "publish": "zigbee2mqtt/0x00158d0003xxxxxx/set",
+        "query": "zigbee2mqtt/0x00158d0003xxxxxx/set",
+        "valueMapRef": "default"
+      }
+    ],
+    "capabilities": [
+      {
+        "type": "devices.capabilities.on_off",
+        "retrievable": true
+      }
+    ]
+  },
+  {
+    "name": "Свет",
+    "room": "Прихожая",
+    "type": "devices.types.light",
+    "mqtt": [
+      {
+        "type": "devices.capabilities.on_off",
+        "publish": "yandex/devices/hallCeilingLamp/set",
+        "query": "yandex/devices/hallCeilingLamp/set"
+      }
+    ],
+    "capabilities": [
+      {
+        "type": "devices.capabilities.on_off",
+        "retrievable": true
+      }
+    ]
+  },
+  {
+    "name": "Свет",
+    "room": "Спальня",
+    "type": "devices.types.light",
+    "mqtt": [
+      {
+        "type": "devices.capabilities.on_off",
+        "publish": "yandex/devices/bedroomCeilingLamp/set",
+        "query": "yandex/devices/bedroomCeilingLamp/set"
+      }
+    ],
+    "capabilities": [
+      {
+        "type": "devices.capabilities.on_off",
+        "retrievable": true
+      }
+    ]
+  },
+  {
+    "name": "Увлажнитель",
+    "description": "Ультразвуковой увлажнитель Xiaomi",
+    "room": "Спальня",
+    "type": "devices.types.humidifier",
+    "capabilities": [
+      {
+        "type": "devices.capabilities.on_off",
+        "retrievable": true
+      },
+      {
+        "type": "devices.capabilities.mode",
+        "retrievable": true,
+        "parameters": {
+          "instance": "fan_speed",
+          "modes": [
+            { "value": "low" },
+            { "value": "medium" },
+            { "value": "high" },
+            { "value": "auto" }
+          ]
+        }
+      }
+    ],
+    "properties": [
+      {
+        "type": "devices.properties.float",
+        "retrievable": true,
+        "parameters": {
+          "instance": "temperature",
+          "unit": "unit.temperature.celsius"
+        }
+      },
+      {
+        "type": "devices.properties.float",
+        "retrievable": "true",
+        "parameters": {
+          "instance": "humidity",
+          "unit": "unit.percent"
+        }
+      }
+    ],
+    "complexState": {
+      "publish": "yandex/devices/bedroomHumidifier/set",
+      "query": "yandex/devices/bedroomHumidifier/get"
+    }
+  },
+  {
+		"name": "Кондиционер",
+		"description": "Кондиционер Haier в спальне",
+		"room": "Спальня",
+		"type": "devices.types.thermostat.ac",
+		"capabilities": [
+			{
+				"type": "devices.capabilities.on_off"
+			},
+			{
+				"type": "devices.capabilities.range",
+				"retrievable": "true",
+				"parameters": {
+					"instance": "temperature",
+					"unit": "unit.temperature.celsius",
+					"range": {
+						"min": 16,
+						"max": 30
+					}
+				}
+			},
+			{
+				"type": "devices.capabilities.mode",
+				"parameters": {
+					"instance": "fan_speed",
+					"modes": [
+						{ "value": "low" },
+						{ "value": "medium" },
+						{ "value": "high" },
+						{ "value": "auto" }
+					]
+				},
+				"mappingRef": "haierFanSpeed"
+			},
+			{
+				"type": "devices.capabilities.mode",
+				"parameters": {
+					"instance": "swing",
+					"modes": [
+						{ "value": "auto" },
+						{ "value": "horizontal" },
+						{ "value": "stationary" },
+						{ "value": "vertical" }
+					]
+				},
+				"mappingRef": "haierSwing"
+			},
+			{
+				"type": "devices.capabilities.mode",
+				"parameters": {
+					"instance": "thermostat",
+					"modes": [
+						{ "value": "auto" },
+						{ "value": "cool" },
+						{ "value": "dry" },
+						{ "value": "fan_only" },
+						{ "value": "heat" }
+					]
+				},
+				"mappingRef": "haierThermostat"
+			}
+		],
+		"complexState": {
+			"publish": "yandex/devices/bedroom/ac/set",
+			"query": "yandex/devices/bedroom/ac/get"
+		}
+	}
+]

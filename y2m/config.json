@@ -1,0 +1,94 @@
+{
+  "name": "yandex2mqtt",
+  "version": "0.3.1",
+  "slug": "yandex2mqtt",
+  "description": "Yandex to MQTT Bridge",
+  "url": "https://github.com/dparhonin/hassio-yandex2mqtt",
+  "startup": "application",
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armhf", 
+    "i386"
+  ],
+  "boot": "auto",
+  "map": [
+    "share:rw",
+    "config:rw",
+    "ssl:ro"
+  ],
+  "ports": {
+    "443/tcp": 443
+  },
+  "ports_description": {
+    "443/tcp": "Yandex2mqtt service tcp-listen ssl port"
+  },
+  "options": {
+    "db_path": "/share/y2m/tokenstorage.json",
+    "debug": "y2m.*",
+    "devices_path": "/share/y2m/devices.json",
+    "mappings_path": "/share/y2m/mappings.json",
+    "mqtt": {
+      "host": "localhost",
+      "port": 1883,
+      "user": "",
+      "password": ""
+    },
+    "https": {
+      "privateKey": "/ssl/privkey.pem",
+      "certificate": "/ssl/fullchain.pem",
+      "port": 443
+    },
+    "clients": [
+      {
+        "id": "1",
+        "name": "Yandex",
+        "clientId": "yandex-hassio",
+        "clientSecret": "secret12345",
+        "isTrusted": false
+      }
+    ],
+    "users": [
+      {
+        "id": "1",
+        "username": "admin",
+        "password": "admin",
+        "name": "Administrator"
+      }
+    ]
+  },
+  "schema": {
+    "db_path": "str",
+    "debug": "str?",
+    "devices_path": "str",
+    "mappings_path": "str",
+    "mqtt": {
+      "host": "str",
+      "port": "int",
+      "user": "str?",
+      "password": "str?"
+    },
+    "https": {
+      "privateKey": "str",
+      "certificate": "str",
+      "port": "int"
+    },
+    "clients": [
+      {
+        "id": "str",
+        "name": "str",
+        "clientId": "str",
+        "clientSecret": "str",
+        "isTrusted": "bool"
+      }
+    ],
+    "users": [
+      {
+        "id": "str",
+        "username": "str",
+        "password": "str",
+        "name": "str"
+      }
+    ]
+  }
+}
