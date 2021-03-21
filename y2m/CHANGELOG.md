@@ -3,3 +3,4 @@
 - Device configuration moved to /config/y2m/devices.json.
 ## 0.3.1
 - Both yandex2mqtt and hassion-yandex2mqtt repos were merged.
+- File /share/y2m/mappings.json added.
