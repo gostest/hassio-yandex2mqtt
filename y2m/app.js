@@ -35,8 +35,10 @@ if (config.devices_path) {
 }
 
 if (config.mappings_path) {
+  debug(`Reading mappings from ${config.mappings_path}`)
   global.valueMappings = require(config.mappings_path)
 } else {
+  debug('Using default mappings')
   global.valueMappings = {
     default: {
       true: 'ON',

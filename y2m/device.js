@@ -16,7 +16,8 @@ function fixEncoding(str) {
 
 function convertValue(valueMapping, val) {
   let mqttVal;
-  if (valueMapping && global.valueMappings[valueMapping]) {
+  if (!valueMapping) valueMapping="default"
+  if (global.valueMappings[valueMapping]) {
     debug('Using value mapping: %s', valueMapping);
     mqttVal = global.valueMappings[valueMapping][val];
     debug('Value mapped: %s -> %s', val, mqttVal);
@@ -223,7 +224,7 @@ class device {
         }
         capability.state.value += val;
       } else {
-        debug(`*** Absolute: ${capability.state.value} = ${val}`);
+        debug(`*** Absolute: ${capability.state.value} -> ${val}`);
         capability.state.value = val;
       }
       topic = capability.state.publish || false;
